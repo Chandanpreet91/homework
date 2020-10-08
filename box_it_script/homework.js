@@ -52,3 +52,29 @@ function drawTable(names) {
   drawLine(BOTTOM_LINE, lineLength);
 }
 drawTable(names);
+
+jasontau  7:26 PM
+Loops:
+// iterative -- good when you know/can find out the length of the loop
+// say happy birthday to bob for each year of his life
+let bob = {
+  gender: 'Male',
+  age: 50,
+  height: 178,
+  weight: 80,
+};
+for (let i = 1; i <= bob.age; i++) console.log(`Happy ${i} Birthday Bob!`);
+// for...in -- for going through objects
+// print out bob's vitals
+for (vital in bob) {
+  console.log(`${vital}: ${bob[vital]}`)
+}
+// for...of -- good for iterating through an array
+const countries = ['Canada', 'Zimbabwe', 'China']
+for (let name of countries) {
+  console.log(name.toUpperCase())
+}
+// while --- can run forever, be very carefuly
+// 1. Can I use a for loop instead?
+// 2. Can I construct this loop with a surefire way to exit?
+// 3. Things like Games might use While loops, but are otherwise very rare
